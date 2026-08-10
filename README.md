@@ -2,9 +2,9 @@
 
 前端工程師 Joy 的個人作品集網站。
 
-## 這是什麼
+## 本網站為測試 AI Agent 協作呈現而製作。
 
-**本網站為測試 AI Agent 協作呈現而製作。** 整個網站的設計、排版、互動動畫、內容調整，是以既有作品集網站為原型，透過與 AI Agent（Claude）對話完成，用來驗證 AI 輔助前端協作開發的可行性與效率，並了解無使用經驗者看到的畫面過程。頁面內容為真實作品集資料，但製作過程本身即為此次測試的主軸。
+整個網站的設計、排版、互動動畫、內容調整，是以既有作品集網站為原型，透過與 AI Agent（Claude）對話完成，用來驗證 AI 輔助前端協作開發的可行性與效率，並了解無使用經驗者看到的畫面過程。頁面內容為真實作品集資料，但製作過程本身即為此次測試的主軸。
 
 目前線上版本：https://aijoyzuo.github.io/joy-portfolio/ （部署後即可看到此版本）
 
@@ -27,22 +27,11 @@ npm run build     # 產生 out/ 靜態站（next.config.js 已設定 output: 'ex
 3. Settings → Pages，Source 選 `main` branch / `root` → Save
 4. 等待 1–2 分鐘，開啟 https://aijoyzuo.github.io/joy-portfolio/ 即可看到網站
 
-## 已同步的內容（對齊目前設計）
-
-- RWD 斷點：768px（Side Project 排版、小專案 grid 4→2 欄、What's more 跑馬燈單排→雙排）、576px（導覽列字體縮小、Work with me 縮成 ✉ 圖示以維持單行）
-- 導覽列 / Hero 標題的追蹤滑鼠眼睛裝飾（JOY 的 O、Hi I'm JOY 的 O）
-- Hero 區塊 Pac-Man 造型巡邏動畫
-- 進站 Pac-Man 主題讀取動畫（頁面資源載完自動消失）
-- What's more 雙向跑馬燈；GA / 日檢 / AI Agent / 人資主管四格已換上對應圖片
-- 所有圖片改用 WebP 格式（比原始 PNG/JPG 小約 90%）
-- 底部黑色色塊（無文字說明，改放在此 README）
-- 導覽列與底部「Work with me」皆為 `mailto:` 連結，點擊直接開啟信箱
-
 ## 結構
 
 - `app/` — App Router 頁面與全站 layout
 - `components/` — Nav, Hero, About, Projects, Others, Contact, Loader
-- `components/useReveal.ts` / `useEyeTrack.ts` / `useNarrow.ts` — 捲動淡入、滑鼠追蹤眼睛、雙斷點 RWD hook
+- `components/useReveal.ts` / `useEyeTrack.ts` / `useNarrow.ts` 
 - `lib/data.ts` — 技能、專案、其他成就資料
 - `public/assets/` — WebP 圖片
 
