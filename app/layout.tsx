@@ -19,8 +19,24 @@ const notoSansTC = Noto_Sans_TC({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aijoyzuo.github.io/joy-portfolio/'),
   title: 'JOY — Frontend Developer',
   description: 'Joy 的作品集：前端工程師，React / Next.js / TypeScript',
+  openGraph: {
+    title: 'JOY — Frontend Developer',
+    description: 'Joy 的作品集：前端工程師，React / Next.js / TypeScript',
+    url: 'https://aijoyzuo.github.io/joy-portfolio/',
+    siteName: 'JOY — Frontend Developer',
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    locale: 'zh_TW',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JOY — Frontend Developer',
+    description: 'Joy 的作品集：前端工程師，React / Next.js / TypeScript',
+    images: ['/og.png'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
