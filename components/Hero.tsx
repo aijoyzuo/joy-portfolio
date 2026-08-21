@@ -1,8 +1,7 @@
 'use client';
 import { useReveal } from './useReveal';
 import { useEyeTrack } from './useEyeTrack';
-
-const BASE = process.env.NODE_ENV === 'production' ? '/joy-portfolio' : '';
+import { BASE } from '@/lib/data';
 
 export default function Hero() {
   const { ref, revealed } = useReveal<HTMLDivElement>();

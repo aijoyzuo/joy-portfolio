@@ -1,8 +1,9 @@
 export const SKILLS = ['React', 'Next.js', 'Redux', 'TypeScript', 'JavaScript', 'TailwindCSS', 'Bootstrap', 'SQL', 'Supabase'];
 
 // GitHub Pages 子路徑部署時，next.config.js 的 basePath 不會自動套用到寫死的字串路徑，這裡手動補上。
-const BASE = process.env.NODE_ENV === 'production' ? '/joy-portfolio' : '';
-const asset = (path: string) => `${BASE}${path}`;
+// next.config.js 的 basePath 在 npm run dev、npm run build 都會套用，所以這裡不分環境，一律加前綴。
+export const BASE = '/joy-portfolio';
+export const asset = (path: string) => `${BASE}${path}`;
 
 export type FeaturedProject = {
   title: string;
