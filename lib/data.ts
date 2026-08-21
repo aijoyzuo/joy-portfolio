@@ -91,4 +91,6 @@ export const OTHERS: OtherItem[] = [
   { title: '日本語能力試驗', sub: 'N1', thumbSrc: asset('/assets/more-jlpt.webp') },
   { title: '人資主管', sub: '部立醫院/教育局', thumbSrc: asset('/assets/more-ai.webp') },
   { title: 'AI AGENT', thumbSrc: asset('/assets/more-hr.webp') },
+  { title: 'JavaScript', sub: '六角學院', thumbSrc: asset('/assets/more-js.webp') },
+  { title: 'React.js', sub: '六角學院', thumbSrc: asset('/assets/more-react.webp') },
 ];

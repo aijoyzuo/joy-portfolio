@@ -62,14 +62,18 @@ export default function Projects() {
           style={{ opacity: gridRevealed ? 1 : 0, transform: gridRevealed ? 'none' : 'translateY(28px)' }}
         >
           {SMALL.map((sp) => (
-            <div key={sp.title} className="bg-cream rounded-lg overflow-hidden border-[3px] border-ink shadow-[5px_5px_0_#111827] transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_#111827]">
+            <div
+              key={sp.title}
+              onClick={sp.demo ? () => window.open(sp.demo, '_blank', 'noreferrer') : undefined}
+              className={`bg-cream rounded-lg overflow-hidden border-[3px] border-ink shadow-[5px_5px_0_#111827] transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_#111827] ${sp.demo ? 'cursor-pointer' : ''}`}
+            >
               {sp.thumbSrc && <img src={sp.thumbSrc} alt={sp.title} className="block w-full h-[150px] object-cover border-b-[3px] border-ink" />}
               <div className="pl-[10px] pr-5.5 pt-5 pb-6">
                 <div className="font-serifTC font-bold text-xl text-ink mb-1.5">{sp.title}</div>
                 <div className="text-xs text-ink leading-[1.7] mb-3.5">{sp.tags}</div>
                 <div className="flex gap-4 text-[13px]">
-                  {sp.demo && <a href={sp.demo} target="_blank" rel="noreferrer" className="font-bold underline">DEMO</a>}
-                  {sp.github && <a href={sp.github} target="_blank" rel="noreferrer" className="font-bold underline">GITHUB</a>}
+                  {sp.demo && <a href={sp.demo} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="font-bold underline">DEMO</a>}
+                  {sp.github && <a href={sp.github} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="font-bold underline">GITHUB</a>}
                 </div>
               </div>
             </div>

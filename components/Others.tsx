@@ -25,8 +25,9 @@ export default function Others() {
   const itemWidth = narrow ? 142 : 172;
   const duration = narrow ? '18s' : '28s';
 
-  const rowFull = narrow ? [...OTHERS.slice(0, 3), ...OTHERS.slice(0, 3)] : [...OTHERS, ...OTHERS];
-  const row2 = [...OTHERS.slice(3, 6), ...OTHERS.slice(3, 6)];
+  const half = Math.ceil(OTHERS.length / 2);
+  const rowFull = narrow ? [...OTHERS.slice(0, half), ...OTHERS.slice(0, half)] : [...OTHERS, ...OTHERS];
+  const row2 = [...OTHERS.slice(half), ...OTHERS.slice(half)];
 
   return (
     <section id="others" className="py-28 px-6 sm:px-10 md:px-20 bg-cream">
