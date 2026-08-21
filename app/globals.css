@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { margin: 0; padding: 0; background: #FFFDF5; }
+* { box-sizing: border-box; }
+::selection { background: #111827; color: #FFD84D; }
+a { color: #111827; }
+a:hover { color: #2F6FED; }
+
+@keyframes marqueeL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marqueeR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes spritePatrol { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(46px); } }
+@keyframes pacmanChomp {
+  0%, 100% { clip-path: polygon(100% 74%, 44% 48%, 100% 26%, 100% 0%, 0% 0%, 0% 100%, 100% 100%); }
+  50% { clip-path: polygon(100% 50%, 100% 50%, 100% 50%, 100% 0%, 0% 0%, 0% 100%, 100% 100%); }
+}
+@keyframes spriteBob { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-8px); opacity: 1; } }
+.animate-marquee-l { animation: marqueeL var(--marquee-duration, 28s) linear infinite; }
+.animate-marquee-r { animation: marqueeR var(--marquee-duration, 28s) linear infinite; }
+.animate-sprite-patrol { animation: spritePatrol 3.4s ease-in-out infinite; }
+.animate-pacman-chomp { animation: pacmanChomp .4s linear infinite; }
+.animate-sprite-bob { animation: spriteBob .6s ease-in-out infinite; }
