@@ -89,8 +89,11 @@ export const OTHERS: OtherItem[] = [
   { title: 'WIREFRAME', sub: '後臺管理系統設計', thumbSrc: asset('/assets/more-wireframe.webp') },
   { title: 'GOOGLE ANALYTICS CERTIFICATION', sub: '2026/2/27', thumbSrc: asset('/assets/more-ga.webp') },
   { title: '日本語能力試驗', sub: 'N1', thumbSrc: asset('/assets/more-jlpt.webp') },
+  { title: 'TOEIC', sub: '830', thumbSrc: asset('/assets/more-toeic.webp') },
   { title: '人資主管', sub: '部立醫院/教育局', thumbSrc: asset('/assets/more-ai.webp') },
   { title: 'AI AGENT', thumbSrc: asset('/assets/more-hr.webp') },
   { title: 'JavaScript', sub: '六角學院', thumbSrc: asset('/assets/more-js.webp') },
   { title: 'React.js', sub: '六角學院', thumbSrc: asset('/assets/more-react.webp') },
+  { title: 'Power Automate', sub: 'Hahow 完課', thumbSrc: asset('/assets/more-powerautomate.webp') },
+  { title: 'Power BI', sub: 'Hahow 完課', thumbSrc: asset('/assets/more-powerbi.webp') },
 ];
